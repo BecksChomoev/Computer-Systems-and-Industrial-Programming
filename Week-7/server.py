@@ -17,7 +17,7 @@ print(f"client connected {client_address}")
 data = client_connection.recv(1024)
 print(f"Received from client: {data.decode()}")
 
-response = "Hello from server! I received your message."
+response = f"Echo: {data.decode()}"
 client_connection.send(response.encode())
 print("Response sent to client")
 
